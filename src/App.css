@@ -88,6 +88,70 @@ section {
   color: white;
 }
 
+.graphs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.graph-container {
+  width: 30%;
+  min-height: 100px;
+}
+
+.graph-container span {
+  margin: 0 auto;
+}
+
+.donut-chart {
+  position: relative;
+  width: 110px;
+  height: 55px;
+}
+
+.donut-chart::before,
+.donut-chart::after {
+  position: absolute;
+}
+
+.donut-chart::before {
+  content: '';
+  width: inherit;
+  height: inherit;
+  border: 30px solid #596169;
+  border-bottom: none;
+  border-top-left-radius: 175px;
+  border-top-right-radius: 175px;
+}
+
+.donut-chart::after {
+  content: '';
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: cadetblue;
+}
+
+.donut-chart li {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border: 30px solid;
+  border-top: none;
+  border-bottom-left-radius: 175px;
+  border-bottom-right-radius: 175px;
+  transform-origin: 50% 0;
+}
+
+.donut-fill {
+  z-index: 4;
+  border-color: #67A3E7;
+  transform: rotate(150deg);
+}
+
 /* Alerts Section */
 
 #alerts-section {
