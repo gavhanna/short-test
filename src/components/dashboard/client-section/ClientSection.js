@@ -20,11 +20,17 @@ export default class ClientSection extends Component {
         <div className="graphs">
           <div className="graph-container">
             <DonutChart />
-            <p style={{ color: "white", textAlign: "center" }}>ACTIVE CLIENTS</p>
           </div>
-          <div className="graph-container">
+          <div className="graph-container align-to-bottom">
             <Bar data={[1, 4, 3, 5, 6, 7, 3, 8, 4, 5, 3, 7]} />
             <p style={{ color: "white", textAlign: "center" }}>LAST 12 MONTHS</p>
+          </div>
+          <div className="graph-container increase align-to-bottom" style={{ width: "100px" }}>
+            <div style={{ textAlign: "center", marginBottom: "20px" }}>
+              <i className="fas fa-angle-double-up"></i>
+            </div>
+            <span>104</span>
+            <p style={{ color: "white", textAlign: "center" }}>INCREASE</p>
           </div>
         </div>
       </section>

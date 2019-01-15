@@ -7,7 +7,9 @@
     "@vx/mock-data": "0.0.182",
     "@vx/scale": "0.0.182",
     "@vx/shape": "0.0.183",
+    "chart.js": "^2.7.3",
     "react": "^16.7.0",
+    "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
   },
