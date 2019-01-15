@@ -179,3 +179,21 @@ justify-content: flex-end; */
   margin-right: 5px;
   border-radius: 5px;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+  .graphs {
+    flex-direction: column;
+    height: auto;
+  }
+  .graph-container {
+    margin: 0 auto;
+  }
+  .alerts-list-item {
+    flex-direction: column;
+  }
+  .alerts-list-item>div {
+    width: 100% !important;
+  }
+}
