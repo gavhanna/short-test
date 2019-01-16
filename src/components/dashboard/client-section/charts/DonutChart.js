@@ -38,10 +38,10 @@ export default class DonutChart extends Component {
           options={options}
           height={200}
         />
-        <div class="client-count">
+        <div className="client-count">
           <span>{active}</span>
         </div>
-        <div class="info">
+        <div className="info">
           <span>ACTIVE CLIENTS</span>
         </div>
       </React.Fragment>

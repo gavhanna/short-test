@@ -25,7 +25,7 @@ export default class AlertsListItem extends Component {
           </span>
         </div>
         <div className="alerts-list-item-importance vertically-center" style={{ textAlign: "right" }}>
-          <span>
+          <span title="Apologies, but this is only 'signal' icon for free on FontAwesome">
             <strong>{itemData.importance.desc} <i className="fas fa-signal"></i></strong>
           </span>
         </div>

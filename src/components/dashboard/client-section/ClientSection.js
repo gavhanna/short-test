@@ -41,7 +41,7 @@ export default class ClientSection extends Component {
             <div className="options">
               <span
                 onClick={this.onOptionsClick}
-
+                title="Switch data sets"
                 style={{ position: "relative" }}
               ><i className="fas fa-cog" style={{ color: "#747F86" }}></i>
                 {
