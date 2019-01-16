@@ -1,5 +1,61 @@
-My approach for tackling the problem as as follows:
+-- Approach -------------------------
 
-- I decided to use React as it is my current most used front-end framework.
+- Decided to use React as it is my current most used front-end framework.
 
-- I split up the 
+- Split up the dashboard into its two obvious section, Clients and Alerts.
+
+- Created a function to return a promise containing fake data after a 1 second setTimeout, to emulate 
+  a network request.
+
+- Grabbed the HEX colour codes from the image.
+
+- Set basic styling of the two sections to approximately match the image.
+
+- Searched for a React "graph" npm package.
+
+- Settled on react-chartjs-2 for the half-donut chart, but decided to make my own bar graph
+  as no premade graphs adequately fit the style on the original image.
+
+- For the bar graph: created a series of 12 tall thin grey divs, with smaller blue divs
+  overlaying them with a % height dependent on the numeric value of the data passed in as props.
+
+- Used react-chartjs-2 to create the half-donut chart, with data passed in from props.
+
+- Grabbing appropriate icons from FontAwesome.com as I'm going, such as the chevrons over the
+  "increase" section and the options cog.
+
+- Began working on the Alerts section, initially creating the menu buttons, which are not functional.
+
+- Created the list and list item sub-components and used flexbox to create the grid, instead of a html table,
+  in an attempt to make creating a responsive list/table easier.
+
+- Created simple sorting functionality using vanilla JavaScript "sort" function, inside the AlertsList component.
+  List items are sorted depending on the "order" prop passed from the parent component, which is
+  changed via the HTML select element.
+
+- Set the alerts list to initiall display 5 items, by setting that number in the state of the "AlertsSection" component,
+  and passed that state via a prop to the "AlertsList" component.
+
+- Set the "SEE MORE" button to increment the number of list items to be rendered by 3 on each button click.
+
+- Set the "VIEW ALL" button to set the number of list items to be rendered to match the length of the entire list, in order
+  to instantly show all list items present in the application state.
+
+- Added the functionality to be able to switch between 3 data sets in the Clients section, 
+  in order to show how the graphs would appear given different inputs.
+
+- Decided to set the media query breakpoint at 600px as that was the point at which 
+  the graphs began to touch.
+
+
+-- Inside the media query -----------
+- Set the graph's container flex-direction to "column" and centered the graphs.
+- Set the alert's list items flex-direction to "column".
+- Minor changes to a few other elements.
+
+
+-- Ideas for possible improvements --
+- Add another media breakpoint between about 600px and 400px to adjust for empty space
+  in the alerts list.
+- Remove the white outer padding on mobile devices in order to free up screen real-estate
+- Implement more sorting options.

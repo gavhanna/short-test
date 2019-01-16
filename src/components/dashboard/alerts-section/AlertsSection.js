@@ -5,7 +5,7 @@ export default class AlertsSection extends Component {
   constructor() {
     super();
     this.state = {
-      numToRender: 3,
+      numToRender: 5,
       order: "Importance"
     }
   }

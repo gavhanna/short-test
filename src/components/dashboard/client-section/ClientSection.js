@@ -33,7 +33,7 @@ export default class ClientSection extends Component {
 
     return (
       <section id="client-section">
-        <div className="menu">
+        <div className="menu" style={{ flexDirection: "row" }}>
           <div className="menu-left">
             <h2>CLIENTS <i className="fas fa-caret-right"></i></h2>
           </div>

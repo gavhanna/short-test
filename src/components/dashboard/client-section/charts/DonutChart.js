@@ -23,7 +23,7 @@ export default class DonutChart extends Component {
     };
 
     const options = {
-      cutoutPercentage: 70,
+      cutoutPercentage: 65,
       rotation: 1 * Math.PI,
       circumference: 1 * Math.PI,
       legend: {

@@ -259,10 +259,11 @@ section {
   .menu {
     flex-direction: column;
   }
+  .menu-right {
+    display: flex;
+    justify-content: flex-end;
+  }
   .options>span {
     margin: 5px;
-  }
-  .client-options {
-    left: 23px;
   }
 }
