@@ -1,10 +1,35 @@
 import React, { Component } from 'react'
 import Bar from './charts/Bar';
 import DonutChart from './charts/DonutChart';
+import ClientOptions from './client-options/ClientOptions';
 
 export default class ClientSection extends Component {
+  constructor() {
+    super();
+    this.state = {
+      selectedDataSet: {},
+      optionsMenuOpen: false
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.data && !nextProps.loading) {
+      this.setState({ selectedDataSet: nextProps.data[0] })
+    }
+  }
+
+  onOptionsClick = (e) => {
+    console.log("clicked");
+    this.setState({ optionsMenuOpen: !this.state.optionsMenuOpen })
+  }
+
+  setSelectedData = (i) => {
+    const id = parseInt(i)
+    this.setState({ selectedDataSet: this.props.data[id] });
+  }
+
   render() {
-    const data = this.props.data[0];
+    const data = this.state.selectedDataSet;
     const { loading } = this.props;
 
     return (
@@ -15,7 +40,17 @@ export default class ClientSection extends Component {
           </div>
           <div className="menu-right">
             <div className="options">
-              <span><i className="fas fa-cog" style={{ color: "#747F86" }}></i></span>
+              <span
+                onClick={this.onOptionsClick}
+
+                style={{ position: "relative" }}
+              ><i className="fas fa-cog" style={{ color: "#747F86" }}></i>
+                {
+                  this.state.optionsMenuOpen ?
+                    <ClientOptions dataSets={this.props.data} setSelectedData={this.setSelectedData} /> :
+                    null
+                }
+              </span>
             </div>
           </div>
         </div>

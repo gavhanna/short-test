@@ -11,6 +11,10 @@ ul {
   margin: 0;
 }
 
+i {
+  pointer-events: none;
+}
+
 button {
   border: 1px solid #7BC6A7;
   background: #5BB891;
@@ -93,6 +97,21 @@ section {
 
 #client-section.graph-title {
   color: white;
+}
+
+.client-options {
+  position: absolute;
+  background: white;
+  border-radius: 3px;
+  padding: 5px;
+  width: 70px;
+  top: 0;
+  left: 23px;
+  color: #4B545D;
+}
+
+.client-options>li:hover {
+  color: #333;
 }
 
 .graphs {

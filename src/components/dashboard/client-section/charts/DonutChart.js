@@ -39,7 +39,7 @@ export default class DonutChart extends Component {
           height={200}
         />
         <div class="client-count">
-          <span>203</span>
+          <span>{active}</span>
         </div>
         <div class="info">
           <span>ACTIVE CLIENTS</span>
