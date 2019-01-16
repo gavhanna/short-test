@@ -69,12 +69,16 @@ export default class AlertsSection extends Component {
             null :
             <div className="see-more" style={{ textAlign: "center" }}>
               <button onClick={this.onSeeMoreButtonClick}>
-                {this.state.numToRender < this.props.data.length ? "SEE MORE" : "THATS ALL FOLKS!"} {this.state.numToRender < this.props.data.length ? <i className="fas fa-caret-down"></i> : null}</button>
+                {this.state.numToRender < this.props.data.length ? "SEE MORE" : "END"} {this.state.numToRender < this.props.data.length ? <i className="fas fa-caret-down"></i> : null}</button>
             </div>
         }
 
         <div style={{ margin: "10px 0" }}>
-          <span onClick={this.onViewAllClick} className=" hover-animation" style={{ padding: "5px", cursor: "pointer", borderRadius: "3px" }}><strong>VIEW ALL</strong></span>
+          {this.state.numToRender < this.props.data.length ?
+            <span onClick={this.onViewAllClick} className=" hover-animation" style={{ padding: "5px", cursor: "pointer", borderRadius: "3px" }}><strong>VIEW ALL</strong></span>
+            :
+            null
+          }
         </div>
       </section>
     )
