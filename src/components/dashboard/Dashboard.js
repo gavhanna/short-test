@@ -40,7 +40,7 @@ class Dashboard extends Component {
             { name: "Sophie O'Connor", content: "Sophie's End of Year review", status: "coming up", date: "Feb 15", importance: { num: 1, desc: "Very" } },
             { name: "Steve Wright", content: "Steve's End of Year review", status: "coming up", date: "Mar 12", importance: { num: 2, desc: "Mid" } },
             { name: "Alan Turing", content: "Alan's End of Year review", status: "coming up", date: "Mar 12", importance: { num: 2, desc: "Mid" } },
-            { name: "Adam Compton", content: "Adam's End of Year review", status: "coming up", date: "Mar 12", importance: { num: 1, desc: "Very" } },
+            { name: "Peter Parker", content: "Adam's End of Year review", status: "coming up", date: "Mar 12", importance: { num: 1, desc: "Very" } },
             { name: "Neils Bohr", content: "Neils's End of Year review", status: "coming up", date: "Apr 21", importance: { num: 1, desc: "Very" } },
             { name: "Marie Curie", content: "Marie's End of Year review", status: "coming up", date: "Apr 21", importance: { num: 3, desc: "Low" } },
             { name: "Enrico Fermi", content: "Enrico's End of Year review", status: "coming up", date: "Apr 21", importance: { num: 1, desc: "Very" } },

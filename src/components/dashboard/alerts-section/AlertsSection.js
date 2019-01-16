@@ -5,8 +5,13 @@ export default class AlertsSection extends Component {
   constructor() {
     super();
     this.state = {
-      numToRender: 3
+      numToRender: 3,
+      order: "Importance"
     }
+  }
+
+  onOrderChange = (e) => {
+    this.setState({ order: e.target.value })
   }
 
   onSeeMoreButtonClick = () => {
@@ -45,13 +50,19 @@ export default class AlertsSection extends Component {
         </div>
         <div className="menu">
           <div className="menu-left"></div>
-          <div className="menu-right hover-animation" style={{ marginTop: "20px", padding: "5px", cursor: "pointer", borderRadius: "3px" }}>IMPORTANCE <i className="fas fa-caret-down"></i></div>
+          <select
+            onChange={this.onOrderChange}
+            className="select-dropdown menu-right hover-animation"
+            style={{ marginTop: "20px", padding: "5px", cursor: "pointer", borderRadius: "3px" }}>
+            <option value="Importance">IMPORTANCE</option>
+            <option value="Name">NAME</option>
+          </select>
         </div>
 
         {
           this.props.loading ?
             <span>Loading...</span> :
-            <AlertsList numToRender={this.state.numToRender} data={this.props.data} />
+            <AlertsList numToRender={this.state.numToRender} data={this.props.data} order={this.state.order} />
         }
         {
           this.props.loading ?
