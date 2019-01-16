@@ -8,7 +8,7 @@ class Dashboard extends Component {
     this.state = {
       clientData: [],
       alertsData: [],
-      loading: true
+      loading: false
     }
   }
 
@@ -23,10 +23,16 @@ class Dashboard extends Component {
   }
 
   fetchData = () => {
+    // Note:
+    // As their is no API to make a request to, in this function
+    // i return a promise with a setTimout which will return
+    // the following data after one second to emulate 
+    // pulling data from the network.
+    this.setState({ loading: true })
+
     return new Promise((resolve, regect) => {
       setTimeout(() => {
         resolve({
-          // TODO: fill this stuff in
           clientData: [
             { active: 203, total: 300, lastYear: [1, 4, 3, 5, 6, 7, 3, 8, 4, 5, 3, 7], increase: 104 },
             { active: 250, total: 300, lastYear: [5, 4, 7, 8, 6, 2, 6, 5, 4, 2, 1, 5], increase: 156 },

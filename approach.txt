@@ -1,0 +1,5 @@
+My approach for tackling the problem as as follows:
+
+- I decided to use React as it is my current most used front-end framework.
+
+- I split up the 

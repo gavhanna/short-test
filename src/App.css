@@ -122,10 +122,6 @@ section {
 
 .graph-container {
   width: 200px;
-  /* display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-justify-content: flex-end; */
 }
 
 .graph-container span {
@@ -137,6 +133,25 @@ justify-content: flex-end; */
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.barchart-bar {
+  width: 10%;
+  height: 80px;
+  background: #596169;
+  margin: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.barchart-bar>div {
+  width: 100%;
+  background: #67A3E7;
+}
+
+.barchart-bar:hover>div {
+  background: #2E8FFF;
 }
 
 .info,
