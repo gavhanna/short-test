@@ -66,6 +66,12 @@ section {
 
 /* Helpers */
 
+.loading {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
 .vertically-center {
   display: flex;
   flex-direction: column;
@@ -194,6 +200,7 @@ section {
 #alerts-section {
   background: #5BB891;
   color: white;
+  min-height: 350px;
 }
 
 #alerts-list {

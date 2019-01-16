@@ -62,7 +62,7 @@ export default class AlertsSection extends Component {
 
         {
           this.props.loading ?
-            <span>Loading...</span> :
+            <span className="loading vertically-center">Loading...</span> :
             <AlertsList numToRender={this.state.numToRender} data={this.props.data} order={this.state.order} />
         }
         {

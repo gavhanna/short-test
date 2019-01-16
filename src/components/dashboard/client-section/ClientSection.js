@@ -56,7 +56,7 @@ export default class ClientSection extends Component {
         <div className="graphs">
           {
             loading ?
-              <span>Loading...</span> :
+              <span className="loading">Loading...</span> :
               <React.Fragment>
                 <div className="graph-container">
                   <DonutChart active={data.active} total={data.total} />
