@@ -19,7 +19,6 @@ export default class ClientSection extends Component {
   }
 
   onOptionsClick = (e) => {
-    console.log("clicked");
     this.setState({ optionsMenuOpen: !this.state.optionsMenuOpen })
   }
 

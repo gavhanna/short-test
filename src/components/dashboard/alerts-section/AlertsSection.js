@@ -2,6 +2,25 @@ import React, { Component } from 'react'
 import AlertsList from './alerts-list/AlertsList';
 
 export default class AlertsSection extends Component {
+  constructor() {
+    super();
+    this.state = {
+      numToRender: 3
+    }
+  }
+
+  onSeeMoreButtonClick = () => {
+    this.setState({
+      numToRender: this.state.numToRender + 3
+    })
+  }
+
+  onViewAllClick = () => {
+    this.setState({
+      numToRender: this.props.data.length
+    })
+  }
+
   render() {
     return (
       <section id="alerts-section">
@@ -29,9 +48,22 @@ export default class AlertsSection extends Component {
           <div className="menu-right hover-animation" style={{ marginTop: "20px", padding: "5px", cursor: "pointer", borderRadius: "3px" }}>IMPORTANCE <i className="fas fa-caret-down"></i></div>
         </div>
 
-        <AlertsList />
-        <div  style={{margin: "10px 0"}}>
-        <span className=" hover-animation" style={{padding: "5px", cursor: "pointer", borderRadius: "3px"}}><strong>VIEW ALL</strong></span>
+        {
+          this.props.loading ?
+            <span>Loading...</span> :
+            <AlertsList numToRender={this.state.numToRender} data={this.props.data} />
+        }
+        {
+          this.props.loading ?
+            null :
+            <div className="see-more" style={{ textAlign: "center" }}>
+              <button onClick={this.onSeeMoreButtonClick}>
+                {this.state.numToRender < this.props.data.length ? "SEE MORE" : "THATS ALL FOLKS!"} {this.state.numToRender < this.props.data.length ? <i className="fas fa-caret-down"></i> : null}</button>
+            </div>
+        }
+
+        <div style={{ margin: "10px 0" }}>
+          <span onClick={this.onViewAllClick} className=" hover-animation" style={{ padding: "5px", cursor: "pointer", borderRadius: "3px" }}><strong>VIEW ALL</strong></span>
         </div>
       </section>
     )

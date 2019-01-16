@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 export default class AlertsListItem extends Component {
   render() {
+    const { itemData } = this.props;
     return (
       <li className="alerts-list-item">
         <div className="alerts-list-item-name">
@@ -10,22 +11,22 @@ export default class AlertsListItem extends Component {
               <i className="fas fa-birthday-cake"></i>
             </span>
           </div>
-          <h4 className="vertically-center">Adam Compton</h4>
+          <h4 className="vertically-center">{itemData.name}</h4>
         </div>
         <div className="alerts-list-item-title vertically-center">
           <span>
-            Adam's End of Year review
+            {itemData.content}
           </span>
-          <span>coming up</span>
+          <span>{itemData.status}</span>
         </div>
         <div className="alerts-list-item-date vertically-center">
           <span>
-            Feb 03
+            {itemData.date}
           </span>
         </div>
         <div className="alerts-list-item-importance vertically-center" style={{ textAlign: "right" }}>
           <span>
-            <strong>VERY <i className="fas fa-signal"></i></strong>
+            <strong>{itemData.importance.desc} <i className="fas fa-signal"></i></strong>
           </span>
         </div>
       </li>

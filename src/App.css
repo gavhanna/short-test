@@ -199,6 +199,12 @@ justify-content: flex-end; */
   border-radius: 5px;
 }
 
+.see-more>button {
+  background: #7BC6A7;
+  border: none;
+  border-radius: 3px;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 600px) {
