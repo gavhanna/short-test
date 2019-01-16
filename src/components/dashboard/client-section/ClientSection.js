@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Bar from './charts/Bar';
+import BarChart from './charts/BarChart';
 import DonutChart from './charts/DonutChart';
 import ClientOptions from './client-options/ClientOptions';
 
@@ -62,7 +62,7 @@ export default class ClientSection extends Component {
                   <DonutChart active={data.active} total={data.total} />
                 </div>
                 <div className="graph-container align-to-bottom">
-                  <Bar data={data.lastYear} />
+                  <BarChart data={data.lastYear} />
                   <p style={{ color: "white", textAlign: "center" }}>LAST 12 MONTHS</p>
                 </div>
                 <div className="graph-container increase align-to-bottom" style={{ width: "100px" }}>

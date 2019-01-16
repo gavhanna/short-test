@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 // This component renders a tall thin div with a grey backround,
 // it then overlays a smaller div whose height depends on the values 
 // passed in by the props
-export default class Bar extends Component {
+export default class BarChart extends Component {
   render() {
     return (
       <div style={{ display: "flex" }}>

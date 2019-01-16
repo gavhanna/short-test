@@ -47,6 +47,8 @@
 - Decided to set the media query breakpoint at 600px as that was the point at which 
   the graphs began to touch.
 
+- Minor styling adjustments and fixes.
+
 
 -- Inside the media query -----------
 - Set the graph's container flex-direction to "column" and centered the graphs.
